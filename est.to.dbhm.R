@@ -48,30 +48,7 @@ est.to.dbhm <- function(data.in = est83669,
         for.dbhm[,vars[i]] <- round(data.in[,vars2[i]]*mult[i],roun)
         cat("Var", vars2[i],"in var",vars[i],". Factor *",mult[i],"\n")
     }
-    
-    
-    # for.dbhm         <- data.frame( std_id = data.in$site,
-    #                                ano    = as.integer(format(as.Date(data.in$date), "%Y")),
-    #                                mes    = as.integer(format(as.Date(data.in$date), "%m")),
-    #                                dia    = as.integer(format(as.Date(data.in$date), "%d")),
-    #                                tm     = round(data.in$tar*10,0),
-    #                                tmax   = round(data.in$tmax*10,0),
-    #                                tmin   = round(data.in$tmin*10,0),
-    #                                um     = round(data.in$ur,0),
-    #                                umin   = rep(32766,times = length(data.in$date)),
-    #                                n_sum  = rep(32766,times = length(data.in$date)),
-    #                                n_lown = rep(32766,times = length(data.in$date)),
-    #                                fsm    = round(data.in$ws*10,0),
-    #                                fmaxx  = round(data.in$wd,0),
-    #                                fmaxs  = rep(32766,times = length(data.in$date)),
-    #                                rsum   = round(data.in$prec*10,0),
-    #                                d0m    = rep(32766,times = length(data.in$date)),
-    #                                sun    = round(data.in$cc*10,0),
-    #                                E01    = rep(32766,times = length(data.in$date)),
-    #                                snow   = rep(32766,times = length(data.in$date)),
-    #                                mslp   = rep(32766,times = length(data.in$date)),
-    #                                patm   = round(data.in$patm,0)
-    # )
+  
     for.dbhm[is.na(for.dbhm)]  <-  32766
     for.dbhm[for.dbhm == Inf]  <-  32766
     for.dbhm[for.dbhm == -Inf] <-  32766
